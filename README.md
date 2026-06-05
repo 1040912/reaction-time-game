@@ -1,24 +1,69 @@
+# Reaction Time Game
 
-> Open this page at [https://1040912.github.io/reaction-time-game/](https://1040912.github.io/reaction-time-game/)
+A two-player reaction time game built with a BBC micro:bit and Microsoft MakeCode. The game uses cardboard, aluminum foil touch pads, and alligator clips to create a physical reaction pad.
 
-## Use as Extension
+Players wait for the signal, then race to touch their foil pad as fast as possible. The micro:bit measures the reaction time, tracks scores, detects false starts, plays sound effects, and announces the winner.
 
-This repository can be added as an **extension** in MakeCode.
+## Project Link
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/1040912/reaction-time-game** and import
+Open the project page here:
 
-## Edit this project
+https://1040912.github.io/reaction-time-game/
 
-To edit this repository in MakeCode.
+## How It Works
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/1040912/reaction-time-game** and click import
+1. A player starts the round by touching the GND pad and the START pad.
+2. The micro:bit shows a countdown: 3, 2, 1.
+3. The game waits for a random amount of time.
+4. A random LED lights up and a sound plays.
+5. Player 1 and Player 2 race to react.
+6. The first player to touch their pad wins the round.
+7. The reaction time is shown in milliseconds.
+8. The scoreboard shows both players' scores.
+9. The first player to reach 3 points wins the match.
+10. Pressing A+B resets the game.
 
-#### Metadata (used for search, rendering)
+## Pin Connections
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+| micro:bit Pin | Connected To |
+|---|---|
+| P0 | START foil pad |
+| P1 | Player 1 foil pad |
+| P2 | Player 2 foil pad |
+| GND | Shared ground foil pad |
+| 3V | Not used |
+
+To trigger a pad, the player must complete the circuit by touching GND and one other foil pad at the same time.
+
+## Features
+
+- Two-player reaction system
+- Random start delay
+- Reaction time measurement in milliseconds
+- False-start detection
+- Score tracking for both players
+- First-to-3 winner system
+- Sound effects using the micro:bit speaker
+- LED countdown and winner animations
+- A+B reset button
+
+## Materials
+
+- BBC micro:bit with speaker
+- Cardboard
+- Aluminum foil
+- Alligator clips
+- Tape
+- Marker
+- Battery pack or USB power
+
+## Physical Build
+
+The cardboard board has separate foil pads for START, Player 1, Player 2, and GND. The GND pad is shared. Players touch the GND pad and their assigned player pad to complete the circuit.
+
+Recommended layout:
+
+```text
+             [ START ]
+
+[ GND ]   [ PLAYER 1 ]   [ PLAYER 2 ]
