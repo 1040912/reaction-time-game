@@ -17,7 +17,7 @@ input.onPinPressed(TouchPin.P0, function () {
         led.stopAnimation()
         basic.clearScreen()
         led.plotBrightness(randint(0, 4), randint(0, 4), 255)
-        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.BaDing), music.PlaybackMode.InBackground)
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.JumpUp), music.PlaybackMode.InBackground)
     }
 })
 input.onPinPressed(TouchPin.P2, function () {
@@ -33,7 +33,7 @@ input.onPinPressed(TouchPin.P2, function () {
             . . . # #
             . . . # #
             `)
-        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.UntilDone)
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Punchline), music.PlaybackMode.UntilDone)
         basic.pause(500)
         basic.showNumber(end - start)
         basic.showString("P1")
@@ -68,7 +68,6 @@ input.onButtonPressed(Button.AB, function () {
     round = 0
     basic.showString("RESET")
     music._playDefaultBackground(music.builtInPlayableMelody(Melodies.PowerUp), music.PlaybackMode.UntilDone)
-    basic.showString("READY")
     basic.showIcon(IconNames.Yes)
 })
 input.onPinPressed(TouchPin.P1, function () {
@@ -84,7 +83,7 @@ input.onPinPressed(TouchPin.P1, function () {
             # # . . .
             # # . . .
             `)
-        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.UntilDone)
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Punchline), music.PlaybackMode.UntilDone)
         basic.pause(500)
         basic.showNumber(end - start)
         basic.showString("P1")
